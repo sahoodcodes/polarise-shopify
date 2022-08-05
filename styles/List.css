@@ -1,0 +1,88 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10rem;
+    padding-right: 6rem;
+    margin-top: 2rem;
+}
+
+.nav-left {
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.nav-right {
+    display: inline;
+    display: flex;
+}
+.nav-right-drop button{
+    background: var(--p-background-hovered);
+}
+
+
+
+
+.nav-right-Header {
+    margin-right: 2rem;
+}
+
+.nav-right-drop Button {
+    margin-right: 2rem;
+}
+
+.nav-right-button Button {
+    background: var(--p-action-primary-pressed);
+    color: white;
+}
+.nav-right-button Button:hover{
+    background: var(--p-action-primary-hovered);
+}
+.table-head {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.tabel-search{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 35rem;
+}
+.side-bar Frame{
+    float: right;
+}
+
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.modal-horzondal{
+    height: 2px;
+    border-radius: 3px;
+    /* margin-left: 5%; */
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-color: gray;
+    width: 100%;
+}
+.modal-image{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+   
+}
+.modal-image img{
+    margin-top: 2rem;
+    height: 15rem;
+}
+.modal-container h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+.modal-container p {
+    line-height: 1.5rem;
+    color: rgb(92, 91, 91);
+}
