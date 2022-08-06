@@ -6,21 +6,15 @@ import {
     ChoiceList,
     Filters,
     useIndexResourceState,
-    Select,
     Tabs,
-    Heading,
     Frame,
     Loading,
     Badge,
     Modal,
     TextContainer,
-    DisplayText,
-    rgbaString,
-    Button, Popover, ActionList, Checkbox
 } from "@shopify/polaris";
 import { useState, useCallback, useEffect } from "react";
 import translations from "@shopify/polaris/locales/en.json";
-// import Modal from "./Modal"
 
 let checkList = []
 var List = []
