@@ -18,7 +18,7 @@ export default function Navbar() {
     return (
         <div className={"navbar"} >
             <div>
-                <h1 className='nav-left' >Products</h1>
+                <h1 className='nav-left' >polarise test</h1>
             </div>
             <div className="nav-right" >
                 <div className="nav-right-Header" >
