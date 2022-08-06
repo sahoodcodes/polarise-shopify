@@ -1,5 +1,5 @@
 import {
-     Button, Heading, Popover, ActionList, 
+    Button, Heading, Popover, ActionList, Frame, Loading,
 } from "@shopify/polaris";
 import { useCallback, useState } from 'react';
 
@@ -14,38 +14,44 @@ export default function Navbar() {
         <Button onClick={togglePopoverActive} disclosure>
             More actions
         </Button>);
-        
+
     return (
-        <div className={"navbar"} >
-            <div>
-                <h1 className='nav-left' >polarise test</h1>
-            </div>
-            <div className="nav-right" >
-                <div className="nav-right-Header" >
-                    <Heading  >Export</Heading>
+        <div> 
+            {/* <Frame>
+            <Loading />
+        </Frame> */}
+            <div className={"navbar"} >
+
+                <div>
+                    <h1 className='nav-left' >polarise test</h1>
                 </div>
-                <div className="nav-right-Header" >
-                    <Heading  >import</Heading>
-                </div>
-                <div className="nav-right-drop" >
-                    <div>
-                        <Popover
-                            active={popoverActive}
-                            activator={activator}
-                            autofocusTarget="first-node"
-                            onClose={togglePopoverActive}
-                        >
-                            <ActionList
-                                actionRole="menuitem"
-                                items={[{ content: "Import" }, { content: "Export" }]}
-                            />
-                        </Popover>
+                <div className="nav-right" >
+                    <div className="nav-right-Header" >
+                        <Heading  >Export</Heading>
                     </div>
-                </div>
-                <div className="nav-right-button " >
-                    <Button  >
-                        Add Product
-                    </Button>
+                    <div className="nav-right-Header" >
+                        <Heading  >import</Heading>
+                    </div>
+                    <div className="nav-right-drop" >
+                        <div>
+                            <Popover
+                                active={popoverActive}
+                                activator={activator}
+                                autofocusTarget="first-node"
+                                onClose={togglePopoverActive}
+                            >
+                                <ActionList
+                                    actionRole="menuitem"
+                                    items={[{ content: "Import" }, { content: "Export" }]}
+                                />
+                            </Popover>
+                        </div>
+                    </div>
+                    <div className="nav-right-button " >
+                        <Button  >
+                            Add Product
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div>

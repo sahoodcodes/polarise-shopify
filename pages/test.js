@@ -1,20 +1,27 @@
 import {
-  ChoiceList,
   TextField,
-  Card,
+  IndexTable,
   Filters,
+  ChoiceList,
   DataTable,
+  Select,
+  useIndexResourceState,
+  Button, Popover, ActionList,
 } from "@shopify/polaris";
 import {
   AppProvider,
   Page,
+  Card,
   ResourceList,
   Avatar,
   TextStyle,
 } from "@shopify/polaris";
 import { useState, useCallback } from "react";
+import translations from "@shopify/polaris/locales/en.json";
+import Table from "../Components/Table"
+import Table2 from "../Components/Table2"
 
-export default function DataTableFiltersExample() {
+export default function IndexTableWithFilteringExample() {
   const [availability, setAvailability] = useState(null);
   const [productType, setProductType] = useState(null);
   const [taggedWith, setTaggedWith] = useState(null);
@@ -89,6 +96,7 @@ export default function DataTableFiltersExample() {
           allowMultiple
         />
       ),
+      shortcut: true,
     },
     {
       key: "taggedWith",
@@ -104,6 +112,10 @@ export default function DataTableFiltersExample() {
       ),
     },
   ];
+
+  const test = () => {
+    console.log("test");
+  }
 
   const appliedFilters = [];
   if (!isEmpty(availability)) {
@@ -131,42 +143,21 @@ export default function DataTableFiltersExample() {
     });
   }
 
+  
   return (
     <AppProvider
-    i18n={{
-      Polaris: {
-        ResourceList: {
-          sortingLabel: "Sort by",
-          defaultItemSingular: "item",
-          defaultItemPlural: "items",
-          showing: "Showing {itemsCount} {resource}",
-          Item: {
-            viewItem: "View details for {itemName}",
-          },
-        },
-        Common: {
-          checkbox: "checkbox",
-        },
-      },
-    }}>
-    <div style={{ height: "568px" }}>
+    i18n={translations}>
+       {/* <div style={{ height: "568px" }}>
       <Card>
         <Card.Section>
-        <Filters
+          <Filters
             queryValue={queryValue}
             filters={filters}
-            appliedFilters={appliedFilters}
+            // appliedFilters={appliedFilters}
             onQueryChange={handleFiltersQueryChange}
             onQueryClear={handleQueryValueRemove}
             onClearAll={handleFiltersClearAll}
-          /><Filters
-          queryValue={queryValue}
-          filters={filters}
-          appliedFilters={appliedFilters}
-          onQueryChange={handleFiltersQueryChange}
-          onQueryClear={handleQueryValueRemove}
-          onClearAll={handleFiltersClearAll}
-        />
+          />
         </Card.Section>
         <DataTable
           columnContentTypes={[
@@ -197,7 +188,9 @@ export default function DataTableFiltersExample() {
           totals={["", "", "", 255, "$155,830.00"]}
         />
       </Card>
-    </div>
+    </div> */}
+<Table2 />
+{/* <Table /> */}
     </AppProvider>
   );
 
@@ -220,5 +213,4 @@ export default function DataTableFiltersExample() {
     } else {
       return value === "" || value == null;
     }
-  }
-}
+  }}
