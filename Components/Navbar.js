@@ -3,6 +3,7 @@ import {
 } from "@shopify/polaris";
 import { useCallback, useState } from 'react';
 
+
 export default function Navbar() {
     const [popoverActive, setPopoverActive] = useState(false);
 
@@ -16,14 +17,14 @@ export default function Navbar() {
         </Button>);
 
     return (
-        <div> 
+        <div>
             {/* <Frame>
             <Loading />
         </Frame> */}
             <div className={"navbar"} >
 
                 <div>
-                    <h1 className='nav-left' >polarise test</h1>
+                    <h1 className='nav-left' >Products</h1>
                 </div>
                 <div className="nav-right" >
                     <div className="nav-right-Header" >
@@ -34,17 +35,13 @@ export default function Navbar() {
                     </div>
                     <div className="nav-right-drop" >
                         <div>
-                            <Popover
-                                active={popoverActive}
-                                activator={activator}
-                                autofocusTarget="first-node"
-                                onClose={togglePopoverActive}
-                            >
-                                <ActionList
-                                    actionRole="menuitem"
-                                    items={[{ content: "Import" }, { content: "Export" }]}
-                                />
-                            </Popover>
+                            <Heading>
+                            <select class="dropdown" >
+        <option selected hidden>More Option</option>
+        <option value="michel">Option A</option>
+        <option value="thiago">Option B</option>
+</select>
+</Heading>
                         </div>
                     </div>
                     <div className="nav-right-button " >
